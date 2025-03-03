@@ -1,1 +1,0 @@
-{"mappings":"AAAA","sources":["index.css"],"sourcesContent":["#heading {\r\n    color: red;\r\n}\r\n\r\n\r\n/* // pacage.json is a configuration file\r\n// two types of packages dependicies\r\n\r\n// 1. dev dependecy\r\n// 2. normal dependency */"],"names":[],"version":3,"file":"index.9e4c6fd2.css.map","sourceRoot":"/__parcel_source_root/"}
