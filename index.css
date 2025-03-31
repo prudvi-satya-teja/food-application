@@ -1,0 +1,133 @@
+.header {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-items {
+    margin-top: 10px;
+}
+
+.nav-items > ul {
+    font-size: 24px;
+    display: flex;
+    list-style-type: none;
+    padding-right: 50px;
+    text-decoration: none;
+}
+
+.nav-items > ul > li {
+    padding: 0px 20px;
+}
+
+.search {
+    padding: 20px;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    text-decoration: none;
+}
+
+.res-card {
+    background-color: lightgray;
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.res-card:hover {
+    border: 1px solid black;
+}
+
+.res-logo {
+    width: 100%;
+    height: 150px;
+}
+
+.top-rated {
+    display: flex;
+    margin: 10px;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    width: 200px;
+    height: 400px;
+    background-color: rgb(188, 185, 185);
+    margin: 10px;
+}
+
+.top-rated-btn {
+    height: 30px;
+}
+
+.login-btn {
+    height: 40px;
+    width: 60px;
+}
+
+.search {
+    display: flex;
+    height: 30px;
+    padding: 0 10px 0 0;
+}
+
+.search-box-input {
+    height: 25px;
+}
+
+.signup-container,
+.login-container {
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    margin: 150px 600px;
+    border: 2px solid rgb(217, 243, 49);
+}
+
+#username {
+    height: 30px;
+    margin: 20px;
+    width: 200px;
+    font-style: oblique;
+    border-color: black;
+}
+
+#password {
+    height: 30px;
+    margin: 20px 0 20px 20px;
+    width: 200px;
+    font-style: oblique;
+    border-color: black;
+}
+
+.Signup,
+.Login {
+    height: 40px;
+    width: 200px;
+    margin: 20px 0 20px 20px;
+    border-radius: 10px;
+    background-color: rgb(224, 202, 77);
+    border: none;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.user-details {
+    border: 2px solid black;
+    height: 210px;
+    /* width: 200px; */
+    padding: 10px;
+}
