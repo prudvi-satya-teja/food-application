@@ -1,8 +1,8 @@
 export const CDN_URL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366/";
 
-export const LOGO_URL =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnn4m1Ap6mClU9fZq6esWlK8E6vIvB5mKk2T9XCxzs4QhA5LeOXh3EVy_HrM1_lgXDTxY&usqp=CAU";
+export const LOGO_URL = "https://seeklogo.com/images/F/food-logo-59E5A73AFD-seeklogo.com.png";
+// "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnn4m1Ap6mClU9fZq6esWlK8E6vIvB5mKk2T9XCxzs4QhA5LeOXh3EVy_HrM1_lgXDTxY&usqp=CAU";
 
 export const RESTAURANT_URL =
     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.1034224&lng=82.0714653&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

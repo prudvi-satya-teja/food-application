@@ -14,7 +14,7 @@ const useBody = () => {
         // optinal chaining
         const resList =
             json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
-        
+
         console.log(resList);
         setListofRestaurants(resList);
         setFilteredRestaurants(resList);
@@ -24,7 +24,7 @@ const useBody = () => {
         fetchData();
     }, []);
 
-    return [listofRestaurants, filteredRestaurants];
+    return [listofRestaurants, filteredRestaurants, setFilteredRestaurants, setListofRestaurants];
 };
 
 export default useBody;

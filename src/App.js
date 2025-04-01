@@ -11,6 +11,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Footer from "./components/Footer";
 // import Grocery from "./components/Grocery";
 
 // Chuncking
@@ -26,6 +27,7 @@ const AppLayout = () => {
         <div className="app">
             <Header />
             <Outlet />
+            <Footer />
         </div>
     );
 };
