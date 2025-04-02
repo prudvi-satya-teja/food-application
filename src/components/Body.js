@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useBody from "../utils/useBody";
@@ -13,6 +13,10 @@ const Body = () => {
     const onlineStatus = useOnlineStatus();
     const [listofRestaurants, filteredRestaurants, setFilteredRestaurants, setListofRestaurants] =
         useBody();
+
+    console.log(listofRestaurants);
+
+    const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
 
     if (!onlineStatus) return <h2> You are offline !! Please Check you internet connection </h2>;
     // conditional rendering
@@ -34,7 +38,7 @@ const Body = () => {
                             ></input>
                         </div>
                         <button
-                            className="bg-orange-300 w-20 h-10"
+                            className="bg-green-300 w-20 h-10 hover:bg-green-400 hover:font-medium hover:cursor-pointer"
                             onClick={() => {
                                 console.log(searchText);
                                 console.log(listofRestaurants);
@@ -49,7 +53,7 @@ const Body = () => {
                     </div>
 
                     <button
-                        className="bg-orange-300 w-50 h-10 mt-8"
+                        className="bg-green-300 w-50 h-10 mt-8 hover:bg-green-400 hover:font-medium hover:cursor-pointer"
                         onClick={() => {
                             const filteredRestaurants = listofRestaurants.filter(
                                 (res) => res?.info.avgRating > 4
@@ -60,11 +64,14 @@ const Body = () => {
                         Top Rated Restaurants
                     </button>
                 </div>
-
                 <div className="flex flex-wrap">
                     {filteredRestaurants.map((res) => (
                         <Link key={res?.info.id} to={"/restaurants/" + res?.info.id}>
-                            <RestaurantCard resData={res} />
+                            {res?.info?.veg ? (
+                                <RestaurantCard resData={res} />
+                            ) : (
+                                <PromotedRestaurantCard resData={res} />
+                            )}
                         </Link>
                     ))}
                 </div>

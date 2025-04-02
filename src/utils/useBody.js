@@ -7,6 +7,7 @@ const useBody = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
     let fetchData = async () => {
+
         const response = await fetch(RESTAURANT_URL);
         const json = await response.json();
         console.log("json", json);

@@ -26,7 +26,7 @@ import { Component } from "react";
 
 const About = () => {
     return (
-        <div className="h-200">
+        <div className="">
             <h1>About</h1>
             <h2> This is About page in my food application</h2>
             <User name={"Food Mart"} city={"kakinada"} state={"Andhra Pradesh"} />
