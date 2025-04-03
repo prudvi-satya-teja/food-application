@@ -17,7 +17,7 @@ const Body = () => {
     console.log(listofRestaurants);
 
     const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
-
+    console.log(listofRestaurants.length);
     if (!onlineStatus) return <h2> You are offline !! Please Check you internet connection </h2>;
     // conditional rendering
     else
