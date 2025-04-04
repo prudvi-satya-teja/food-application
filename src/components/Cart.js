@@ -1,7 +1,7 @@
 const Cart = () => {
     return (
-        <div className=''>
-            <h1>This is Cart page</h1>
+        <div className="text-center font-bold my-40">
+            <h1>Coming Soon ....</h1>
         </div>
     );
 };
