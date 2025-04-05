@@ -3,8 +3,11 @@ import { CDN_URL } from "../utils/constants";
 const ItemList = (props) => {
     return (
         <div>
-            {props.data.map((card) => (
-                <div className="flex flex-row justify-between p-2 m-2 border-b-1 border-b-gray-400 h-30">
+            {props.data.map((card, index) => (
+                <div
+                    key={index}
+                    className="flex flex-row justify-between p-2 m-2 border-b-1 border-b-gray-400 h-30"
+                >
                     <div className="w-9/12">
                         <div>
                             {card?.card?.info?.name}{" "}
