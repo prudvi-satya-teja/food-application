@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -12,7 +12,10 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Footer from "./components/Footer";
+import UserContext from "./utils/UserContext";
 // import Grocery from "./components/Grocery";
+import appStore from "./utils/ReduxStore/appStore";
+import { Provider } from "react-redux";
 
 // Chuncking
 // Code Splitting
@@ -23,15 +26,28 @@ import Footer from "./components/Footer";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+    const [userName, setUserName] = useState();
+
+    useEffect(() => {
+        // Make an api call send an username and password
+        const data = {
+            name: "Prudvi",
+        };
+        setUserName(data.name);
+    }, []);
+
     return (
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1">
-                <Outlet />
-            </main>
-            
-            <Footer />
-        </div>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+                <div className="flex flex-col min-h-screen">
+                    <Header />
+                    <main className="flex-1">
+                        <Outlet />
+                    </main>
+                    <Footer />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     );
 };
 

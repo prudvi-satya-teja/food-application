@@ -1,23 +1,25 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useBody from "../utils/useBody";
+import UserContext from "../utils/UserContext";
+import User from "./User";
 
 const Body = () => {
     // Local State variable - Super powerful varibles
     const [searchText, setSearchText] = useState("");
 
-    const onlineStatus = useOnlineStatus();
-    const [listofRestaurants, filteredRestaurants, setFilteredRestaurants, setListofRestaurants] =
-        useBody();
+    const { loggedInUser, setUserName } = useContext(UserContext);
 
-    console.log(listofRestaurants);
+    const onlineStatus = useOnlineStatus();
+
+    const [listofRestaurants, filteredRestaurants, setFilteredRestaurants] = useBody();
 
     const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
-    console.log(listofRestaurants.length);
+
     if (!onlineStatus) return <h2> You are offline !! Please Check you internet connection </h2>;
     // conditional rendering
     else
@@ -32,9 +34,7 @@ const Body = () => {
                                 className="border-2 h-8 p-2"
                                 type="text"
                                 value={searchText}
-                                onChange={(e) => {
-                                    setSearchText(e.target.value);
-                                }}
+                                onChange={(e) => setSearchText(e.target.value)}
                             ></input>
                         </div>
                         <button
@@ -63,6 +63,16 @@ const Body = () => {
                     >
                         Top Rated Restaurants
                     </button>
+
+                    <div className="border-blue-700 px-4 mt-8 m-1">
+                        UserName :{" "}
+                        <input
+                            className="border-2 h-8 p-2"
+                            type="text"
+                            value={loggedInUser}
+                            onChange={(e) => setUserName(e.target.value)}
+                        ></input>
+                    </div>
                 </div>
                 <div className="flex flex-wrap">
                     {filteredRestaurants.map((res) => (

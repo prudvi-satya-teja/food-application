@@ -4,7 +4,7 @@ const RestaurantCategory = ({ data, showItems, setShowItem }) => {
     const handleClick = () => {
         setShowItem();
     };
-    console.log(data?.card?.card);
+    // console.log(data?.card?.card);
     return (
         <div className="shadow-lg  w-6/12 m-auto my-2 bg-black">
             <div className="p-2 bg-gray-200 flex justify-between" onClick={handleClick}>

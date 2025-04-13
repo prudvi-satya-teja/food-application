@@ -7,16 +7,15 @@ const useBody = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
     let fetchData = async () => {
-
         const response = await fetch(RESTAURANT_URL);
         const json = await response.json();
-        console.log("json", json);
+        // console.log("json", json);
 
         // optinal chaining
         const resList =
             json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
-        console.log(resList);
+        // console.log(resList);
         setListofRestaurants(resList);
         setFilteredRestaurants(resList);
     };

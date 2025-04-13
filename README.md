@@ -59,3 +59,12 @@ import {Component} from "path";
 
     - useState
     - useEffect
+
+# React
+
+    - Install @reduxjs/toolkit  and react-redux
+    - Build our store
+    - Connect our store to our app
+    - Slice (cartSlice)
+    - Dispatch an action
+    - Selector
