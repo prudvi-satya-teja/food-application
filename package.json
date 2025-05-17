@@ -4,7 +4,7 @@
     "description": "This is react course",
     "scripts": {
         "start": "parcel index.html",
-        "build": "parcel build index.html",
+        "build": "parcel build index.html --public-url ./"
         "test": "jest"
     },
     "keywords": [
