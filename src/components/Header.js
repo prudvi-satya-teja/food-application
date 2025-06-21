@@ -18,8 +18,8 @@ const Header = () => {
 
     return (
         <div className="flex bg-green-300 h-22 justify-between drop-shadow-lg">
-            <div className="w-30 m-2.5 ">
-                <img className="logo" src={LOGO_URL} />
+            <div className="w-25 m-2.5 bg-amber-50 mb-2">
+                <img className="logo w-20 h-16" src={LOGO_URL} />
             </div>
             <div className="flex  p-4 font-medium ">
                 <ul className="flex">
@@ -27,19 +27,19 @@ const Header = () => {
                     <li className="px-5 mt-5 hover:font-bold">
                         <Link to="/"> Home</Link>
                     </li>
-                    <li className="px-5 hover:font-bold mt-5">
+                    {/* <li className="px-5 hover:font-bold mt-5">
                         <Link to="/about">About us </Link>
                     </li>
                     <li className="px-5 hover:font-bold mt-5">
                         <Link to="/contact">Contact us </Link>
-                    </li>
-                    <li className="px-5 hover:font-bold mt-5">
+                    </li> */}
+                    {/* <li className="px-5 hover:font-bold mt-5">
                         <Link to="/grocery"> Grocery </Link>
-                    </li>
+                    </li> */}
                     <li className="px-5 hover:font-bold mt-5">
                         <Link to="/cart">Cart - {cartItems.length} Items</Link>
                     </li>
-                    <button
+                    {/* <button
                         className="bg-orange-400 w-20 h-10 mt-3"
                         onClick={() => {
                             btnNameReact === "Login";
@@ -47,12 +47,15 @@ const Header = () => {
                         }}
                     >
                         {btnNameReact}
-                    </button>
-
-                    <li className="bg-orange-400 w-20 h-10 mt-3 py-2 px-5 m-2">
-                        <Link to="/login">Login</Link>
-                    </li>
-                    <li className="px-5 hover:font-bold mt-5">{loggedInUser}</li>
+                    </button> */}
+                    {/* /* */}
+                    {loggedInUser ? (
+                        <li className="px-5 hover:font-bold mt-5">{loggedInUser}</li>
+                    ) : (
+                        <li className="bg-orange-400 w-20 h-10 mt-3 py-2 px-5 m-2">
+                            <Link to="/login">Login</Link>
+                        </li>
+                    )}
                 </ul>
             </div>
         </div>

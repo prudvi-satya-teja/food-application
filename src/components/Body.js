@@ -64,7 +64,7 @@ const Body = () => {
                         Top Rated Restaurants
                     </button>
 
-                    <div className="border-blue-700 px-4 mt-8 m-1">
+                    {/* <div className="border-blue-700 px-4 mt-8 m-1">
                         UserName :{" "}
                         <input
                             className="border-2 h-8 p-2"
@@ -72,7 +72,7 @@ const Body = () => {
                             value={loggedInUser}
                             onChange={(e) => setUserName(e.target.value)}
                         ></input>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="flex flex-wrap">
                     {filteredRestaurants.map((res) => (

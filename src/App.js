@@ -13,7 +13,6 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Footer from "./components/Footer";
 import UserContext from "./utils/UserContext";
-// import Grocery from "./components/Grocery";
 import appStore from "./utils/ReduxStore/appStore";
 import { Provider } from "react-redux";
 
