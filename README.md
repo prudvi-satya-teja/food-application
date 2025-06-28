@@ -1,4 +1,4 @@
-# Namaste React
+# React
 
 # parcel
 
@@ -20,7 +20,7 @@
 -   Tree Shaking - remove unused code
 -   Different dev and production bundles
 
-# Namaste Food
+#  Food
 
     /**
     *  Header
